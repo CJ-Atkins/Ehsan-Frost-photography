@@ -4,32 +4,45 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../img/ehsan-frost-logo.png';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <StyledNav>
       <StyledSiteLinks>
-        <a href='/about'>about</a>
-        <a href='/contact'>contact</a>
+        <Link id='about' to='/about'>
+          about
+        </Link>
+        <Link id='contact' to='/contact'>
+          contact
+        </Link>
       </StyledSiteLinks>
       <StyledSocialLinks>
         <ul>
           <li>
-            <a href='#'>
+            <Link
+              id='insta'
+              to={{ pathname: 'https://instagram.com' }}
+              target='_blank'
+            >
               <FaInstagram />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='#'>
+            <Link
+              id='facebook'
+              to={{ pathname: 'https://facebook.com' }}
+              target='_blank'
+            >
               <FaFacebook />
-            </a>
+            </Link>
           </li>
         </ul>
       </StyledSocialLinks>
       <StyledLogo>
-        <a href='/'>
+        <Link id='home' to='/'>
           <img src={logo} alt='Ehsan Frost logo' />
-        </a>
+        </Link>
       </StyledLogo>
     </StyledNav>
   );
