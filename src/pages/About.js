@@ -31,11 +31,18 @@ const StyledBannerImg = styled(motion.img)`
   height: 250px;
   width: 100vw;
   object-fit: cover;
+
+  @media screen and (max-width: 1000px) {
+    height: 200px;
+  }
+  @media screen and (max-width: 550px) {
+    height: 100px;
+  }
 `;
 
 const StyledBioDiv = styled(motion.div)`
   padding: 80px 0px;
-  width: 70%;
+  width: 75%;
   margin: auto;
   p {
     font-size: 2rem;
@@ -43,9 +50,37 @@ const StyledBioDiv = styled(motion.div)`
   div {
     margin-top: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     img {
+      width: 100%;
       max-width: 400px;
+    }
+
+    @media screen and (max-width: 800px) {
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 95%;
+    padding: 20px 0;
+    p {
+      font-size: 1.6rem;
+    }
+    div {
+      margin-top: 30px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    padding: 10px 0;
+    p {
+      font-size: 1.3rem;
+    }
+    div {
+      margin-top: 20px;
     }
   }
 `;

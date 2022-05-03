@@ -154,6 +154,20 @@ const StyledGallery = styled(motion.div)`
   div {
     width: 100%;
   }
+
+  @media screen and (max-width: 1500px) {
+    column-count: 3;
+  }
+
+  @media screen and (max-width: 1000px) {
+    column-count: 2;
+    padding: 2rem 4rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 2rem;
+    column-gap: 1em;
+  }
 `;
 
 const StyledFilter = styled(motion.div)`
@@ -162,15 +176,28 @@ const StyledFilter = styled(motion.div)`
   justify-content: center;
   width: 75%;
   margin: auto;
+  flex-wrap: wrap;
   button {
     cursor: pointer;
     font-size: 1.6rem;
     padding: 0.2em 0.6em;
-    margin: 0 0.6em;
+    margin: 0.4em 0.6em;
     background: none;
     border-radius: 0%;
     border: none;
     transition-duration: 200ms;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 90%;
+    padding-top: 2em;
+    button {
+      font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    button {
+      font-size: 1.2rem;
+    }
   }
 `;
 

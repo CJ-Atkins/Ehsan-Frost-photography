@@ -80,18 +80,52 @@ const StyledForm = styled(motion.form)`
   button {
     margin: auto;
   }
+  @media screen and (max-width: 1000px) {
+    padding-top: 40px;
+    font-size: 1.6rem;
+    width: 90%;
+    input {
+      font-size: 1.4rem;
+      box-shadow: 4px 4px #747474;
+    }
+    textarea {
+      font-size: 1.4rem;
+      box-shadow: 4px 4px #747474;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 20px;
+    width: 95%;
+    font-size: 1.4rem;
+    input {
+      font-size: 1.2rem;
+      box-shadow: 3px 3px #747474;
+    }
+    textarea {
+      font-size: 1.2rem;
+      box-shadow: 3px 3px #747474;
+    }
+  }
 `;
 
 const StyledNameEmailDiv = styled(motion.form)`
   margin: auto;
   display: flex;
-  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 `;
 
 const StyledInputDiv = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1.5em;
+  }
 `;
 
 const StyledDivider = styled(motion.form)`
@@ -110,6 +144,19 @@ const StyledButtonDiv = styled(motion.div)`
     border-radius: 0%;
     box-shadow: 5px 5px #747474;
     background-color: #00c9ff;
+  }
+
+  @media screen and (max-width: 1000px) {
+    button {
+      font-size: 1.8rem;
+      box-shadow: 4px 4px #747474;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    button {
+      font-size: 1.6rem;
+      box-shadow: 3px 3px #747474;
+    }
   }
 `;
 

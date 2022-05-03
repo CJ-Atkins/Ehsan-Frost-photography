@@ -39,6 +39,12 @@ const StyledPhotoDiv = styled(motion.div)`
     cursor: pointer;
     margin-bottom: 2em;
   }
+
+  @media screen and (max-width: 550px) {
+    img {
+      margin-bottom: 1em;
+    }
+  }
 `;
 
 export default Photo;
